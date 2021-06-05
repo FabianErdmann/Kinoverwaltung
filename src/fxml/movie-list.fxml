@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MovieController">
+   <bottom>
+      <StackPane prefHeight="54.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnOpenShowings" mnemonicParsing="false" onAction="#openShowings" text="Vorstellungen" />
+         </children>
+      </StackPane>
+   </bottom>
+   <center>
+      <TableView fx:id="movielist" prefHeight="377.0" prefWidth="744.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="511.0" text="Name" />
+          <TableColumn fx:id="colLength" minWidth="0.0" prefWidth="111.0" text="Lauflänge" />
+            <TableColumn fx:id="colFskApproval" prefWidth="121.0" text="FSK" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <Label text="Filmliste" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
